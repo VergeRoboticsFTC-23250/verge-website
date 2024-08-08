@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply text-5xl font-semibold font-gilroy leading-[3.5rem]
+  }
+
+  h2 {
+    @apply text-6xl font-semibold font-gilroy leading-[3.5rem]
+  }
+
+  p {
+    @apply font-normal text-neutral-400
+  }
+}
