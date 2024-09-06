@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image"
 import chassis from '@/public/images/Chassis.png'
 import { FlipWords } from "@/components/ui/flip-words";
 import CardSkeleton from "@/components/ui/card-skeleton";
-import { CodeSlash, Tools } from "react-bootstrap-icons";
+import { ArrowRight, CodeSlash, Tools } from "react-bootstrap-icons";
 import { PiHandshakeFill } from "react-icons/pi";
 
 import outreach from "@/public/images/Outreach.jpg";
@@ -10,13 +11,23 @@ import fundraise from "@/public/images/Fundraise.jpg";
 import document from "@/public/images/Document.jpg";
 import weUseJava from "@/public/images/WeUseJava.png";
 import chassisBento from "@/public/images/ChassisBento.png";
-import { ArrowUpRight, Github } from "@geist-ui/icons";
+import { ArrowUpRight, Github, RefreshCcw } from "@geist-ui/icons";
 import Link from "next/link";
 import { MacbookScrollDemo } from "@/components/ui/macbook-scroll";
+import { motion } from "framer-motion";
+
+import sketch1 from "@/public/images/Sketch1.jpg";
+import sketch2 from "@/public/images/Sketch2.jpg";
+import sketch3 from "@/public/images/Sketch3.jpg";
+import sketch4 from "@/public/images/Sketch4.jpg";
+import cad1 from "@/public/images/CAD1.jpg";
+import manufacture1 from "@/public/images/Manufacture1.jpg"
+import build1 from "@/public/images/Build1.jpg";
+import test1 from "@/public/images/Test1.jpeg";
 
 export default function HomePage() {
   return (
-    <main className="w-screen flex flex-col items-center pb-20 p-6">
+    <main className="w-screen flex flex-col items-center pb-20 p-6 overflow-clip">
       <div className="h-screen w-screen relative overflow-clip select-none">
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-row items-center justify-center h-screen w-screen overflow-clip -z-10 -translate-y-[2vw]">
           <Image src={chassis} alt="Chassis" className="w-screen h-screen object-contain scale-75" />
@@ -31,7 +42,7 @@ export default function HomePage() {
           <h2 className="text-[2vw] transition-all">We strive to<FlipWords words={["innovate.", "win.", "learn.", "connect.", "teach.", "share."]} /></h2>
         </div>
       </div>
-      <div className="max-w-7xl w-full pt-24">
+      <div className="max-w-7xl w-full mt-24">
         <div className="w-full grid grid-cols-3 gap-6">
           <CardSkeleton className="aspect-square">
             <div className="px-8 py-6 flex flex-col justify-end h-full">
@@ -151,10 +162,191 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* <div className="text-xl text-neutral-400 mt-48">We build robots</div>
-      <h2>Competitively.</h2> */}
-      {/* <MacbookScrollDemo /> */}
+      <div className="max-w-7xl w-full mt-48">
+        <div className="relative mt-16 flex w-full h-[444px] items-center justify-center">
+          <div>
+            <div className="flex flex-col items-end">
+              {Array.from({ length: 10 }, (_, index) => Math.pow(index, 2) / 2).map((n) => (
+                <motion.div
+                  key={n}
+                  viewport={{ once: true }}
+                  style={{ width: n / 8 }}
+                  initial={{ marginBottom: 0, paddingBottom: 0, }}
+                  whileInView={{ marginBottom: n / 3, paddingBottom: n * 2 / 3 + 8 }}
+                  transition={{ ease: "easeInOut", duration: 2 }}
+                  className="bg-primary/80 rounded-full"
+                ></motion.div>
+              ))}
+              {Array.from({ length: 10 }, (_, index) => Math.pow(index, 2) / 2).reverse().map((n) => (
+                <motion.div
+                  key={n}
+                  viewport={{ once: true }}
+                  style={{ width: n / 8 }}
+                  initial={{ marginBottom: 0, paddingBottom: 0, }}
+                  whileInView={{ marginBottom: n / 3, paddingBottom: n * 2 / 3 + 8 }}
+                  transition={{ ease: "easeInOut", duration: 2 }}
+                  className="bg-primary/80 rounded-full"
+                ></motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full">
+            <div className="relative w-full h-screen flex flex-col items-center justify-center">
+
+              <div className="relative">
+                <motion.div
+                  animate={{
+                    width: [25, 25, 25, 25, 25, 50, 50, 25]
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "anticipate",
+                    duration: 5
+                  }}
+                  className="absolute top-[37px] right-[617px] h-[90px] bg-primary"
+                />
+
+                <motion.div
+                  animate={{
+                    height: [89, 89, 89, 89, 89, 130, 130, 89]
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "anticipate",
+                    duration: 5
+                  }}
+                  className="absolute top-[38px] left-[69px] h-[89px] w-[25px] bg-primary"
+                />
+
+                <motion.h2
+                  animate={{
+                    rotate: [0, 0, 0, 0, 0, 180, 180, 0],
+                    translateY: [0, 0, 0, 0, 0, -19, -19, 0]
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "anticipate",
+                    duration: 5
+                  }}
+                  className="absolute top-[28px] left-[121px] text-primary text-9xl font-mont"
+                >E</motion.h2>
+                <motion.h2
+                  animate={{
+                    height: [23, 23, 23, 23, 23, 48, 48, 23],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "anticipate",
+                    duration: 5
+                  }}
+                  className="absolute bottom-[100px] left-[367px] w-[75px] bg-primary text-9xl font-mont"
+                ></motion.h2>
+
+                <motion.div
+                  animate={{
+                    width: [57, 57, 57, 57, 57, 82, 82, 57],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "anticipate",
+                    duration: 5
+                  }}
+                  className="absolute top-[37px] left-[588px]"
+                >
+                  <div className="w-full h-[22px] bg-primary"></div>
+                  <div className="w-full h-[22px] bg-primary mt-[46px]"></div>
+                </motion.div>
+
+                <p className="text-xl w-full ml-2">Our design process is</p>
+                <h2 className="text-primary text-9xl font-mont"><span className="opacity-0">I</span>T<span className="opacity-0">E</span>RATIVE</h2>
+                <p className="text-xl w-full mr-2 text-right -mt-6">so our work is <span className="text-primary font-bold">ALWAYS CHANGING</span>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-start">
+            {Array.from({ length: 10 }, (_, index) => Math.pow(index, 2) / 2).map((n) => (
+              <motion.div
+                key={n}
+                viewport={{ once: true }}
+                style={{ width: n / 8 }}
+                initial={{ marginBottom: 0, paddingBottom: 0, }}
+                whileInView={{ marginBottom: n / 3, paddingBottom: n * 2 / 3 + 8 }}
+                transition={{ ease: "easeInOut", duration: 2 }}
+                className="bg-primary/80 rounded-full"
+              ></motion.div>
+            ))}
+            {Array.from({ length: 10 }, (_, index) => Math.pow(index, 2) / 2).reverse().map((n) => (
+              <motion.div
+                key={n}
+                viewport={{ once: true }}
+                style={{ width: n / 8 }}
+                initial={{ marginBottom: 0, paddingBottom: 0 }}
+                whileInView={{ marginBottom: n / 3, paddingBottom: n * 2 / 3 + 8 }}
+                transition={{ ease: "easeInOut", duration: 2 }}
+                className="bg-primary/80 rounded-full"
+              ></motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="h-screen w-screen flex items-center justify-center -mb-48 mt-24 relative">
+        <div className="absolute top-0 right-0 left-0 bottom-0 flex justify-center">
+          <h2 className="w-full max-w-7xl mt-32 text-primary text-8xl">Design Process</h2>
+        </div>
+        <div className="absolute top-0 right-0 left-0 bottom-0 flex justify-center">
+          <h2 className="w-full max-w-7xl mt-32 text-primary text-8xl"></h2>
+        </div>
+        <div className="w-[100vw]overflow-clip -rotate-[15deg]">
+          <div className="w-full inline-flex flex-nowrap">
+            {[0, 1, 2].map(e => (
+              <ul key={e} className="flex items-center justify-center animate-infinite-scroll h-full">
+                {[sketch4, cad1, manufacture1, build1, test1].map((img, i) => (
+                  <li key={i} className="flex h-full items-center">
+                    <CardSkeleton className="w-96 p-4">
+                      <p className="-mb-1">Step {i + 1}</p>
+                      <h3 className="text-4xl mb-2">
+                        {
+                          i == 0 ? "Sketch" :
+                            i == 1 ? "CAD" :
+                              i == 2 ? "Manufacture" :
+                                i == 3 ? "Build" :
+                                  "Test"
+                        }
+                      </h3>
+                      <Image alt={`IMG${i}`} src={img} className={`w-full h-full aspect-video object-cover rounded-2xl ${i != 0 ? "opacity-75" : "opacity-100"}`} />
+                    </CardSkeleton>
+                    <div className="w-16 h-full flex items-center justify-center">
+                      <ArrowRight />
+                    </div>
+                  </li>
+                ))}
+                <li className="flex h-full items-center">
+                  <CardSkeleton className="w-96 p-4">
+                    <p className="-mb-1">Step 6</p>
+                    <h3 className="text-4xl mb-2">Repeat</h3>
+                    <div className="w-full h-full aspect-video border-2 border-neutral-700 rounded-2xl bg-neutral-900 text-neutral-400 flex-col flex items-center justify-center">
+                      <RefreshCcw size={100} />
+                      <h3 className="text-4xl">Repeat</h3>
+                    </div>
+                  </CardSkeleton>
+                  <div className="w-16 h-full flex items-center justify-center">
+                    <ArrowRight />
+                  </div>
+                </li>
+              </ul>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <MacbookScrollDemo />
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+      <div className="w-full h-[8px] -translate-y-[5px] blur-md bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
       <div className="h-screen"></div>
-    </main>
+    </main >
   );
 }

@@ -25,13 +25,14 @@ import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import Image from "next/image";
+import androidStudio from "@/public/images/AndroidStudio.png";
 
 export function MacbookScrollDemo() {
   return (
     <div className="overflow-hidden w-full">
       <MacbookScroll
         title={
-          <span className="text-6xl">
+          <span>
             Programmed in Java.
           </span>
         }
@@ -87,19 +88,16 @@ export const MacbookScroll = ({
       ref={ref}
       className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
     >
-      <motion.h2
+      <motion.div
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="dark:text-white text-neutral-800 text-3xl font-bold mb-20 text-center"
+        className="mb-16 flex flex-col items-center justify-center"
       >
-        {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        )}
-      </motion.h2>
+        <h2 className="text-8xl font-mont text-primary">JAVA CODE</h2>
+        <p className="mt-2 mb-4 text-center">Computer vision, autonomous movement, AI, PID control,<br />sensor processing, and so much more...</p>
+      </motion.div>
       {/* Lid */}
       <Lid
         src={src}
@@ -183,10 +181,10 @@ export const Lid = ({
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <Image
-          src={src as string}
+          src={androidStudio}
           alt="aceternity logo"
           fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+          className=" object-left-top absolute rounded-lg inset-0 bg-black h-full w-full"
         />
       </motion.div>
     </div>
