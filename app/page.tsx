@@ -162,7 +162,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="max-w-7xl w-full mt-48">
+      {/* <div className="max-w-7xl w-full mt-48">
         <div className="relative mt-16 flex w-full h-[444px] items-center justify-center">
           <div>
             <div className="flex flex-col items-end">
@@ -290,9 +290,9 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="h-screen w-screen flex items-center justify-center -mb-48 mt-24 relative">
+      {/* <div className="h-screen w-screen flex items-center justify-center -mb-48 mt-24 relative">
         <div className="absolute top-0 right-0 left-0 bottom-0 flex justify-center">
           <h2 className="w-full max-w-7xl mt-32 text-primary text-8xl">Design Process</h2>
         </div>
@@ -340,11 +340,11 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <MacbookScrollDemo />
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-      <div className="w-full h-[8px] -translate-y-[5px] blur-md bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+      {/* <MacbookScrollDemo /> */}
+      {/* <div className="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+      <div className="w-full h-[8px] -translate-y-[5px] blur-md bg-gradient-to-r from-transparent via-primary to-transparent"></div> */}
 
       <div className="h-screen"></div>
     </main >
